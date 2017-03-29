@@ -29,14 +29,12 @@
 		padding: 1%;
 		margin-top: 1%;
 		background: rgba(0,0,0,0.25);
-		width:97%;
+		width:96%;
 	}
 
 	input[type=checkbox] {
 		visibility: hidden;
 	}
-
-
 }
 	
 	
@@ -47,7 +45,7 @@
 ********************/
 @media (max-width: 1000px){
 	.form{
-		height:30%;
+		height:40%;
 	}
 	#divng, #divpt{
 		display:none;
