@@ -48,7 +48,9 @@
 @media (max-width: 1000px){
 	.form{
 		height:30%;
-		
+	}
+	#divng, #divpt{
+		display:none;
 	}
 	.gop-contain{
 		position:absolute;
