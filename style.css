@@ -50,11 +50,14 @@
 ** Dùng cho Mobile *
 ********************/
 @media (max-width: 1000px){
+	.form{
+		height:20%;
+	}
 	.gop-contain{
-		display:block;
-		width:100%;
+		position:absolute;
+		width:98%;
 		overflow-y: scroll;
-		height:49%;
+		height:90%;
 	}
 	body{
 		font-size:1em;
@@ -86,11 +89,13 @@
 		
 	}
 	.product{
-		min-height:10%;
+		height:10%;
+		
 	}
 	.ketqua{
+		position:relative;
 		width: 98%;
-		max-height:50%;
+		height:50%;
 	}
 	#nutin{
 		display:none;
