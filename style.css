@@ -55,7 +55,7 @@
 		position:absolute;
 		width:97%;
 		overflow-y: scroll;
-		height:88%;
+		height:87%;
 	}
 	body{
 		font-size:1em;
@@ -93,7 +93,7 @@
 	.ketqua{
 		position:relative;
 		width: 98%;
-		height:60%;
+		height:57%;
 	}
 	#nutin{
 		display:none;
@@ -104,7 +104,6 @@
 		padding: 0.3em;
 		margin: 3px 0;
 		border: none;
-		border-radius: 10px;
 		cursor: pointer;
 		font-size:1em;
 	}
@@ -127,7 +126,6 @@
 		position: relative;
 		float: left;
 		line-height: 1em;
-		text-indent: 1em;
 		margin-top: 0.1em;
 		cursor: pointer;
 		-webkit-user-select: none;
@@ -143,7 +141,7 @@
 		bottom: 0;
 		left: 0;
 		content: '';
-		width: 1em;
+		width: 0.1em;
 		background: #D1D3D4;
 		border-radius: 3px 0 0 3px;
 	}
@@ -152,7 +150,6 @@
 	/* toggle hover */
 	input.radio:hover:not(:checked) ~ label:before {
 		content:'';
-		text-indent: .9em;
 		color: #C2C2C2;
 	}
 
@@ -163,7 +160,6 @@
 	/* toggle on */
 	input.radio:checked ~ label:before {
 		content:'';
-		text-indent: .9em;
 		color: #9CE2AE;
 		background-color: #4DCB6D;
 	}
