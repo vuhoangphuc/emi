@@ -52,9 +52,9 @@
 	}
 	.gop-contain{
 		position:absolute;
-		width:98%;
+		width:97%;
 		overflow-y: scroll;
-		height:90%;
+		height:88%;
 	}
 	body{
 		font-size:1em;
