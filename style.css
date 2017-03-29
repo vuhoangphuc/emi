@@ -29,7 +29,7 @@
 		padding: 1%;
 		margin-top: 1%;
 		background: rgba(0,0,0,0.25);
-		
+		width:97%;
 	}
 
 	input[type=checkbox] {
@@ -460,4 +460,3 @@ display:none;
 		font-size:13;
 	}
 }
- 
