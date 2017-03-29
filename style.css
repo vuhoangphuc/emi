@@ -53,11 +53,11 @@
 ********************/
 @media (max-width: 1000px){
 	body{
-		font-size:1em;
+		font-size:1.5em;
 		width:98%;
 	}
 	.pro-ele{
-		font-size:1em;
+		font-size:1.5em;
 		display:block;
 	}
 	.label{
@@ -98,7 +98,7 @@
 		border: none;
 		border-radius: 20px;
 		cursor: pointer;
-		font-size:2em;
+		font-size:1.5em;
 	}
 	input[type=button]:hover {
 		background-color: #45a049;
