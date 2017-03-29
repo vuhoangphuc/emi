@@ -53,11 +53,11 @@
 ********************/
 @media (max-width: 1000px){
 	body{
-		font-size:2em;
+		font-size:1em;
 		width:98%;
 	}
 	.pro-ele{
-		font-size:2em;
+		font-size:1em;
 		display:block;
 	}
 	.label{
@@ -68,7 +68,7 @@
 	.ele-gop{
 		display:inline;
 		width:100%;
-		font-size:2em;
+		font-size:1em;
 	}
 	.input{
 		width:60%;
