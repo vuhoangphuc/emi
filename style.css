@@ -52,6 +52,13 @@
 ** Dùng cho Mobile *
 ********************/
 @media (max-width: 1000px){
+	.gop-contain{
+		
+		display:block;
+		width:100%;
+		overflow-y: scroll;
+		
+	}
 	body{
 		font-size:1em;
 		width:98%;
@@ -172,6 +179,7 @@
 		width:50%;
 	}
 	.chkbh {
+		top:0.5em;
 		left:0.5em;
 		display:inline-block;
 		width: 1em;
