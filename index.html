@@ -1,0 +1,342 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>EMI Calculator by vuhoangphuc</title>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+<link href="apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" />
+<link href="apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+<link href="icon-hires.png" rel="icon" sizes="192x192" />
+<link href="icon-normal.png" rel="icon" sizes="128x128" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96361308-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+<form id="emi">
+<div class="head">
+<div class="form">
+<span class="title nhap"><b>Nhập thông tin:</b></span>
+<p>
+<div class="contain"> <div class="label">Giá xe: </div> <input type="text" id ="giaxe" class="input" onClick="this.select();" pattern="(d{3})([.])(d{2})"> </div>
+<div class="contain"> <div class="label">Trả trước: </div> <input type="text" id="tratruoc" value="0" class="input" onClick="this.select();"></div>
+<div class="contain"> <div class="label">Vay: </div> <input type="text" id="vay" disabled class="input"> </div>
+<div class="contain" id="divng"> <div class="label">Nợ gốc: </div> <input type="text" id="nogoc" disabled class="input"></div>
+<div class="contain" id="divpt"> <div class="label">% trả trước: </div> <input type="text" id="per" disabled class="input"></div>
+<div class="contain" id="divbh"> <section><div class="label">Bảo hiểm:</div> <input type="text" id="pbh" disabled class="input"> 
+<div class="chkbh"><input type="checkbox" name="baohiem" id="bh" value="baohiem" checked><label for="bh"></label></div></section></div><br>
+
+</div>
+<div class="product"><span class="title sp" id="title-sp">Sản phẩm: </span><p>
+	<div id="pro-wrap">
+  <span class="pro-ele" id="sp118"><input class="radio" type="radio" name="product" value="118" id="_118" checked> <label for="_118">118</label></span>
+  <span class="pro-ele" id="sp151"><input class="radio" type="radio" name="product" value="151" id="_151"> <label for="_151">151</label></span>
+  <span class="pro-ele" id="sp129"><input class="radio" type="radio" name="product" value="129" id="_129"> <label for="_129">129</label></span>
+  <span class="pro-ele" id="sp141"><input class="radio" type="radio" name="product" value="141" id="_141"> <label for="_141">141</label></span>
+  <span class="pro-ele" id="sp142"><input class="radio" type="radio" name="product" value="142" id="_142"> <label for="_142">142</label></span>
+  <span class="pro-ele" id="sp143"><input class="radio" type="radio" name="product" value="143" id="_143"> <label for="_143">143</label></span>
+  <span class="pro-ele" id="sp144"><input class="radio" type="radio" name="product" value="144" id="_144"> <label for="_144">144</label></span>
+  <span class="pro-ele" id="sp155"><input class="radio" type="radio" name="product" value="155" id="_155"> <label for="_155">155</label></span>
+</div>
+  <p>
+  <center><input type="button" value="Tính" id="btnSub"/>
+</center>
+</div>
+</form>
+</div>
+<div id="ghichu"><div id="giayto"></div>
+
+</div>
+
+<div class="ketqua" >
+<span class="title gop">Tiền góp hàng tháng (đã bao gồm phí thu hộ):</span><p>
+<div class="gop-contain">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+<input type="text" name="thang[]" disabled style="display:none" class="ele-gop">
+</div>
+</div>
+
+<script type="text/javascript">
+
+document.getElementById("giaxe").onblur =function (){    
+
+    //number-format the user input
+    this.value = parseFloat(this.value.replace(/,/g, ""))
+                    .toFixed(0)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+document.getElementById("tratruoc").onblur =function (){    
+
+    //number-format the user input
+    this.value = parseFloat(this.value.replace(/,/g, ""))
+                    .toFixed(0)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+	var nogoc, giaxe, vay, tratruoc, pbh, lai, gop, pertratruoc ;
+	lai=45;
+	pbh=0.05;
+	var inputgop = 'thang[]';
+	var arrGop = document.getElementsByName(inputgop);
+	var btPrt = document.getElementById("btnPrint");
+	var btSub = document.getElementById("btnSub");
+	
+	Number.prototype.formatMoney = function(c, d, t){
+	var n = this, 
+    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+    d = d == undefined ? "." : d, 
+    t = t == undefined ? "," : t, 
+    s = n < 0 ? "-" : "", 
+    i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };
+
+function submit()
+{
+	giaxe = $("#giaxe").val().replace(/,/g, "");
+	tratruoc= $("#tratruoc").val().replace(/,/g, "");
+	vay=giaxe-tratruoc;
+	
+	var bh = $('#bh');
+
+	if ($('input[name=product]:checked').val() == 143){
+				pbh = vay * 0.055;
+				$("#pbh").val(pbh.formatMoney(0, '.', ','));
+				}
+			else{
+				pbh = vay * 0.05;
+				$("#pbh").val(pbh.formatMoney(0, '.', ','));
+				}
+				
+        if (bh.is(':checked')) {
+			nogoc=vay+pbh;
+			$("#nogoc").val(nogoc.formatMoney(0, '.', ','));
+        } else {
+            nogoc = vay;
+			$("#nogoc").val(nogoc.formatMoney(0, '.', ','));
+        }
+	
+	$("#vay").val(vay.formatMoney(0, '.', ','));
+	pertratruoc=(100*tratruoc)/giaxe;
+	$("#per").val(Math.floor(pertratruoc)+"%");
+	
+			for (var i=0; i<arrGop.length; i++)
+			{
+				t=i+6;
+				r=lai/1200;
+				var e = Math.ceil( nogoc * r * Math.pow(1 + r, t) / ( Math.pow(1 + r, t) - 1)/1000 )*1000;
+				e=e+12000;
+				e=e.formatMoney(0, '.', ',');
+				arrGop[i].value=t + " tháng: " +e;
+			}
+			
+			if((giaxe>10000000 && giaxe<=100000000) && (vay>=5500000 && vay <= 24000000) && (pertratruoc>=20 && pertratruoc <= 90)){
+				$("#sp118").css("display", "inline-block");
+				}
+				else{$("#sp118").css("display", "none");}
+			if((giaxe>20000000) && (vay>=15000000 && vay <= 60000000)&&( pertratruoc>=30 && pertratruoc <=80)){
+				$("#sp151").css("display", "inline-block");
+				}
+				else{$("#sp151").css("display", "none");}
+			if((giaxe>=30000000) && (vay>=15000000 && vay <= 60000000)&&( pertratruoc>=50 && pertratruoc <=80)){
+				$("#sp129").css("display", "inline-block");
+				}
+				else{$("#sp129").css("display", "none");}
+			if((giaxe>=30000000) && (vay>=15000000 && vay <= 70000000)&&( pertratruoc>=50 && pertratruoc <=80)){
+				$("#sp141").css("display", "inline-block");
+				}	
+				else{$("#sp141").css("display", "none");}
+			if((giaxe>=18000000 && giaxe<30000000) && (vay>=9000000 && vay <= 15000000)&&( pertratruoc>=50 && pertratruoc <=80)){
+				$("#sp142").css("display", "inline-block");
+				}
+				else{$("#sp142").css("display", "none");}
+			if((giaxe>=10000000 && giaxe<=40000000) && (vay>=5500000 && vay <= 40000000)&&( pertratruoc>=0 && pertratruoc <=90)){
+				$("#sp143").css("display", "inline-block");
+				}
+				else{$("#sp143").css("display", "none");}
+			if((giaxe>=10000000 && giaxe<=40000000) && (vay>=5500000 && vay <= 36000000)&&( pertratruoc>=10 && pertratruoc <=90)){
+				$("#sp144").css("display", "inline-block");
+				}
+				else{$("#sp144").css("display", "none");}
+			if((giaxe>=10000000 && giaxe<=20000000) && (vay>=8000000 && vay <= 20000000)&&( pertratruoc>=0 && pertratruoc <=20)){
+				$("#sp155").css("display", "inline-block");
+				}
+				else{$("#sp155").css("display", "none");}		
+
+				
+				var sp=$('input[name=product]:checked').val();
+				
+				
+ 
+
+   
+   if (sp==143){
+			
+			nogoc = vay + vay * 0.055;
+		
+			$("#nogoc").val(nogoc.formatMoney(0, '.', ','));
+			$("#giayto").html('<span class="title">Giấy tờ kèm theo: </span><br> <ul> <li>Hộ khẩu (gốc hoặc công chứng trong vòng 90 ngày).</li> <li>Chứng minh nhân dân gốc.</li><li>Hợp đồng lao động hoặc giấy tờ chứng minh thu nhập.</li></ul>');
+			}
+			else{
+		
+			nogoc = vay + vay * 0.05;
+	
+			$("#nogoc").val(nogoc.formatMoney(0, '.', ','));
+			$("#giayto").html('<span class="title">Giấy tờ kèm theo:</span> <br> <ul> <li>Hộ khẩu (gốc hoặc công chứng trong vòng 90 ngày).</li> <li>Chứng minh nhân dân gốc.</li></ul>');
+			}
+
+	 if(sp == 118 || sp == 155){lai=61.8;}
+	 else if (sp == 151 || sp == 142 || sp == 143){
+		lai=45;
+		
+		}
+	 else if (sp == 129 || sp == 141){lai = 35;}
+	 else {lai=68;}
+	 
+	 if(sp == 118 || sp == 144){
+		for (var i=0; i<=arrGop.length; i++)
+			{
+				if(i<19){
+					arrGop[i].style.display="block";
+				}
+				else
+				arrGop[i].style.display="none";
+			}
+	 }
+	 else if(sp == 151 || sp == 142 || sp == 155){
+		for (var i=0; i<=arrGop.length; i++)
+			{
+				if(i>5 && i<19){
+					arrGop[i].style.display="block";
+				}
+				else
+				arrGop[i].style.display="none";
+			}
+	 }
+	 else if(sp == 129 || sp == 141){
+		for (var i=0; i<=arrGop.length; i++)
+			{
+				if(i>5 && i<25){
+					arrGop[i].style.display="block";
+				}
+				else
+				arrGop[i].style.display="none";
+			}
+	 }
+	 else
+	 {
+		for (var i=0; i<=arrGop.length; i++)
+			{
+				arrGop[i].style.display="block";
+			}
+	 }
+				
+}
+
+
+$("#giaxe").keyup(function(){
+	submit();
+});
+$("#tratruoc").keyup(function(){
+	submit();
+});
+$("#bh").click(function(){
+	submit();
+});
+
+$('input[name=product]').click(function() {
+   submit();
+});
+$("#btnSub").click(function(){
+	submit();
+});
+
+
+$(document).ready(function() {
+    $("#giaxe").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl/cmd+A
+            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: Ctrl/cmd+C
+            (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: Ctrl/cmd+X
+            (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+	
+	
+	$("#tratruoc").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl/cmd+A
+            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: Ctrl/cmd+C
+            (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: Ctrl/cmd+X
+            (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+});
+</script>
+</body>
+</html>
