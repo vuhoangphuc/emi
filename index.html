@@ -35,11 +35,12 @@
 </script>
 </head>
 <body>
-<form id="emi">
-<div class="head">
+
+
 <div class="form">
 <span class="title nhap"><b>Nhập thông tin:</b></span>
 <p>
+<form id="emi">
 <div class="contain"> <div class="label">Giá xe: </div> <input type="text" id ="giaxe" class="input" onClick="this.select();" pattern="(d{3})([.])(d{2})"> </div>
 <div class="contain"> <div class="label">Trả trước: </div> <input type="text" id="tratruoc" value="0" class="input" onClick="this.select();"></div>
 <div class="contain"> <div class="label">Vay: </div> <input type="text" id="vay" disabled class="input"> </div>
@@ -48,8 +49,8 @@
 <div class="contain" id="divbh"> <section><div class="label">Bảo hiểm:</div> <input type="text" id="pbh" disabled class="input"> 
 <div class="chkbh"><input type="checkbox" name="baohiem" id="bh" value="baohiem" checked><label for="bh"></label></div></section></div><br>
 
-</div>
-<div class="product"><span class="title sp" id="title-sp">Sản phẩm: </span><p>
+
+<span class="title sp" id="title-sp">Sản phẩm: </span><p>
   <span class="pro-ele" id="sp118"><input class="radio" type="radio" name="product" value="118" id="_118" checked> <label for="_118">118</label></span>
   <span class="pro-ele" id="sp151"><input class="radio" type="radio" name="product" value="151" id="_151"> <label for="_151">151</label></span>
   <span class="pro-ele" id="sp129"><input class="radio" type="radio" name="product" value="129" id="_129"> <label for="_129">129</label></span>
@@ -62,29 +63,9 @@
   <p>
   <center><input type="button" value="Tính" id="btnSub"/>
   <span id="nutin"><input type="button" value="In kết quả" onclick="javascript:window.print();" id="btnPrint"/></span></center>
-</div>
+
 </form>
 </div>
-<div id="ghichu"><div id="giayto"></div><div id="thongtin">
-<span id="title">Thông tin khách hàng</span>
-<ul>
-<li><span class="info">Tên khách hàng:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Loại xe:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Địa chỉ hiện tại:</span><br> ______________________________________________________________________________<p> ______________________________________________________________________________</li><p>
-<li><span class="info">Thời gian ở địa chỉ:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Công ty:</span><br> ______________________________________________________________________________<p> ______________________________________________________________________________</li><p>
-<li><span class="info">Địa chỉ công ty:</span><br> ______________________________________________________________________________<p> ______________________________________________________________________________</li><p>
-<li><span class="info">Thời gian làm việc:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Thu nhập:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Tên người tham chiếu 1:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Số điện thoại tham chiếu 1:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Tên người tham chiếu 2:</span><br> ______________________________________________________________________________</li><p>
-<li><span class="info">Số điện thoại tham chiếu 2:</span><br> ______________________________________________________________________________</li><p>
-</ul>
-</div>
-
-</div>
-
 <div class="ketqua" >
 <span class="title gop">Tiền góp hàng tháng (đã bao gồm phí thu hộ):</span><p>
 <div class="gop-contain">
