@@ -1,15 +1,22 @@
-	.form{
-		height:27%;
-	}
 
-
+/* *******************
+** Dùng cho màn hình *
+**********************/
+@media only screen{
 	body{
 		font-family:tahoma;
 		color:#c10200;
-		width:98%;
 	}
 	.title{
 		font-weight: bold;
+	}
+	#credit{
+		bottom: 0;
+		right: 10;
+		text-align: right;
+		font-style: italic;
+		font-size:10px;
+		color:gray;
 	}
 	#thongtin{
 		display:none;
@@ -36,8 +43,21 @@
 	}
 
 
+}
+	
+	
+	
+
+/* *****************
+** Dùng cho Mobile *
+********************/
+@media (max-width: 1000px){
+	body{
+		font-size:2em;
+		width:98%;
+	}
 	.pro-ele{
-		font-size:1.5em;
+		font-size:2em;
 		display:block;
 	}
 	.label{
@@ -62,11 +82,9 @@
 		
 	}
 	.product{
-		height:15%;
+		min-height:10%;
 	}
 	.ketqua{
-		display:block;
-		height:50%;
 		width: 98%;	
 	}
 	#nutin{
@@ -80,7 +98,7 @@
 		border: none;
 		border-radius: 20px;
 		cursor: pointer;
-		font-size:1.5em;
+		font-size:2em;
 	}
 	input[type=button]:hover {
 		background-color: #45a049;
@@ -193,10 +211,172 @@
 	.chkbh input[type=checkbox]:checked + label {
 		left: 0.4em;
 	}
+#credit{
+display:none;
+}
 
-	#pro-wrap{
+}
+/* *************
+** Dùng cho PC *
+****************/
+@media (min-width:1001px){
+	body{
+		font-size:12;
+	}
+	.label{
+		width:30%;
+		display:inline-block;
+	}
+	.input {
+		width: 50%;
+	}
+	.ketqua{
+		width:35%;
+		height:60%;
+	}
+	.contain{
+		display:inline-block;
+		width:45%;
+	}
+	#ghichu{
+		float:right;
+		width:60%;
+		height:60%;
+	}
+	.product{
+		display:inline-block;
+		width:35%;
+		float:right;
+		height:100%;
+	}
+	.form{
+		width:60%;
+		display:inline-block;
+		float:left;
+		height:100%;
+	}
+	.head{
 		height:20%;
 	}
+	input[type=text], select {
+	  
+		padding: 2px 30px;
+		margin: 3px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+	input[type=button] {
+		background-color: #4CAF50;
+		color: white;
+		padding: 3px 5px;
+		margin: 3px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	input[type=button]:hover {
+		background-color: #45a049;
+	}
+	label {
+	  width: 75;
+	  border-radius: 3px;
+	  border: 1px solid #D1D3D4
+	}
+
+	/* hide input */
+	input.radio:empty {
+		display:none;
+	}
+
+	/* style label */
+	input.radio:empty ~ label {
+		position: relative;
+		float: left;
+		line-height: 2.5em;
+		text-indent: 3.25em;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	input.radio:empty ~ label:before {
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		width: 2.5em;
+		background: #D1D3D4;
+		border-radius: 3px 0 0 3px;
+	}
+
+	/* toggle hover */
+	input.radio:hover:not(:checked) ~ label:before {
+		content:'\2714';
+		text-indent: .9em;
+		color: #C2C2C2;
+	}
+
+	input.radio:hover:not(:checked) ~ label {
+		color: #888;
+	}
+
+	/* toggle on */
+	input.radio:checked ~ label:before {
+		content:'\2714';
+		text-indent: .9em;
+		color: #9CE2AE;
+		background-color: #4DCB6D;
+	}
+
+	input.radio:checked ~ label {
+		color: #f00;
+		font-weight: bold;
+		border: 2px solid #9CE2AE
+	}
+	
+	
+	.chkbh {
+		left:10px;
+		top:5px;
+		display:inline-block;
+		width: 20px;
+		height: 12px;
+		background: #555;
+		margin: 0px;
+		position: relative;
+		border-radius: 5px;
+	}
+	.chkbh label {
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+
+		transition: all .3s ease;
+		cursor: pointer;
+		position: absolute;
+		top: -3px;
+		left: -3px;
+		background: #03b8ff;
+	}
+	.chkbh input[type=checkbox]:checked + label {
+	left: 5px;
+	}
+	
+	
+	
+	
+}
+	
+/**************
+** Dùng chung *
+***************/	
 	
 	.label{
 		display:inline-block;
@@ -204,17 +384,18 @@
 	body{
 		font-family:tahoma;
 	}
-	 #btnSub{
-		display:block;
-		bottom:0px;
-		
+	#btnPrint, #btnSub{
+		display:none;
 	}
 	
 	.pro-ele{
 		display:none;
 		width:auto;
 	}
-
+	.ketqua{
+		float:left;
+		display:block;
+	}
 	.gop-contain{
 		float:left;
 		display:block;
@@ -222,3 +403,56 @@
 		overflow-y: scroll;
 		height:90%;
 	}
+/* *************
+** Dùng cho in *
+****************/
+@media print{
+	
+	body{
+		font-size:13;
+	}
+	.input{
+		font-size:13;
+	}
+	.title, .title.gop{
+		font-style:normal;
+		font-size:13;
+	}
+	#credit{
+		display:none;
+	}
+	#ghichu{
+		display:block;
+		float:right;
+		width:70%;
+	}
+	.info{
+		font-size:8px;
+	}
+	.ketqua{
+		display:block;
+		width:25%;
+		float:left;
+	}
+	.gop-contain{
+		display:block;
+		width:100%;
+		overflow-y: auto;
+		height:auto;
+	}
+	#divbh, #divng, #btnPrint, .nhap, #giayto, .product{
+		display:none;
+	}
+	.head{
+		height:15%;
+	}
+	#thongtin{
+		display:block;
+		font-size:10;
+	}
+	.ele-gop{
+		display:inline;
+		width:100%;
+		font-size:13;
+	}
+}
