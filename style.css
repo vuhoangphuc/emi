@@ -52,6 +52,7 @@
 @media (max-width: 1000px){
 	.form{
 		height:30%;
+		
 	}
 	.gop-contain{
 		position:absolute;
@@ -89,13 +90,13 @@
 		
 	}
 	.product{
-		height:10%;
+		height:15%;
 		
 	}
 	.ketqua{
 		position:relative;
 		width: 98%;
-		height:50%;
+		height:60%;
 	}
 	#nutin{
 		display:none;
