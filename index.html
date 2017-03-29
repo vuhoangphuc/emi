@@ -22,6 +22,17 @@
 
 </script>
 
+<script>
+ var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0) // If Internet Explorer, return version number
+    {
+		if (confirm("Tool chỉ sử dụng được trên Chrome, Firefox, Safari!\nLiên hệ: contact.vuhoangphuc@gmail.com\nSĐT: 0979.599.061 - 0906.843.340\nXin cảm ơn!")) {
+		close();
+		}
+    }
+</script>
 </head>
 <body>
 <form id="emi">
@@ -39,7 +50,6 @@
 
 </div>
 <div class="product"><span class="title sp" id="title-sp">Sản phẩm: </span><p>
-	<div id="pro-wrap">
   <span class="pro-ele" id="sp118"><input class="radio" type="radio" name="product" value="118" id="_118" checked> <label for="_118">118</label></span>
   <span class="pro-ele" id="sp151"><input class="radio" type="radio" name="product" value="151" id="_151"> <label for="_151">151</label></span>
   <span class="pro-ele" id="sp129"><input class="radio" type="radio" name="product" value="129" id="_129"> <label for="_129">129</label></span>
@@ -48,14 +58,30 @@
   <span class="pro-ele" id="sp143"><input class="radio" type="radio" name="product" value="143" id="_143"> <label for="_143">143</label></span>
   <span class="pro-ele" id="sp144"><input class="radio" type="radio" name="product" value="144" id="_144"> <label for="_144">144</label></span>
   <span class="pro-ele" id="sp155"><input class="radio" type="radio" name="product" value="155" id="_155"> <label for="_155">155</label></span>
-</div>
+
   <p>
   <center><input type="button" value="Tính" id="btnSub"/>
-</center>
+  <span id="nutin"><input type="button" value="In kết quả" onclick="javascript:window.print();" id="btnPrint"/></span></center>
 </div>
 </form>
 </div>
-<div id="ghichu"><div id="giayto"></div>
+<div id="ghichu"><div id="giayto"></div><div id="thongtin">
+<span id="title">Thông tin khách hàng</span>
+<ul>
+<li><span class="info">Tên khách hàng:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Loại xe:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Địa chỉ hiện tại:</span><br> ______________________________________________________________________________<p> ______________________________________________________________________________</li><p>
+<li><span class="info">Thời gian ở địa chỉ:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Công ty:</span><br> ______________________________________________________________________________<p> ______________________________________________________________________________</li><p>
+<li><span class="info">Địa chỉ công ty:</span><br> ______________________________________________________________________________<p> ______________________________________________________________________________</li><p>
+<li><span class="info">Thời gian làm việc:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Thu nhập:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Tên người tham chiếu 1:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Số điện thoại tham chiếu 1:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Tên người tham chiếu 2:</span><br> ______________________________________________________________________________</li><p>
+<li><span class="info">Số điện thoại tham chiếu 2:</span><br> ______________________________________________________________________________</li><p>
+</ul>
+</div>
 
 </div>
 
@@ -210,8 +236,8 @@ function submit()
 				var sp=$('input[name=product]:checked').val();
 				
 				
- 
-
+   btPrt.style.display="inline-block";
+   btSub.style.display="inline-block";
    
    if (sp==143){
 			
@@ -338,5 +364,6 @@ $(document).ready(function() {
     });
 });
 </script>
+<div id="credit">Thông tin góp ý vui lòng gửi về email: contact.vuhoangphuc@gmail.com<br>Số điện thoại: 0906.843.340 - 0979.599.061</div>
 </body>
 </html>
