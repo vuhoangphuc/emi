@@ -1,0 +1,224 @@
+	.form{
+		height:27%;
+	}
+
+
+	body{
+		font-family:tahoma;
+		color:#c10200;
+		width:98%;
+	}
+	.title{
+		font-weight: bold;
+	}
+	#thongtin{
+		display:none;
+	}
+	.ele-gop{
+		display:inline;
+		width:100%;
+	}
+	.form, .product, .ketqua, #ghichu{
+		padding: 1%;
+		margin-top: 1%;
+		border-radius: 10px;
+		background: rgba(0,0,0,0.25);
+		box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+		-o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	   -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+	}
+	
+	
+	
+	input[type=checkbox] {
+		visibility: hidden;
+	}
+
+
+	.pro-ele{
+		font-size:1.5em;
+		display:block;
+	}
+	.label{
+		width:30%;
+		display:inline-block;
+		font-size:1.5em;
+	}
+	.ele-gop{
+		display:inline;
+		width:100%;
+		font-size:2em;
+	}
+	.input{
+		width:60%;
+		font-size:1.5em;
+	}
+	#ghichu{
+		display:none;
+	}
+	.contain, .form, .product{
+		display:block;
+		
+	}
+	.product{
+		height:15%;
+	}
+	.ketqua{
+		display:block;
+		height:50%;
+		width: 98%;	
+	}
+	#nutin{
+		display:none;
+	}
+	input[type=button] {
+		background-color: #4CAF50;
+		color: white;
+		padding: 0.3em 0.2em;
+		margin: 3px 0;
+		border: none;
+		border-radius: 20px;
+		cursor: pointer;
+		font-size:1.5em;
+	}
+	input[type=button]:hover {
+		background-color: #45a049;
+	}
+	label {
+	  width: auto;
+	  border-radius: 3px;
+	  border: 1px solid #D1D3D4
+	}
+
+	/* hide input */
+	input.radio:empty {
+		display:none;
+	}
+
+	/* style label */
+	input.radio:empty ~ label {
+		position: relative;
+		float: left;
+		line-height: 1em;
+		text-indent: 1em;
+		margin-top: 0.1em;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	input.radio:empty ~ label:before {
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		width: 1em;
+		background: #D1D3D4;
+		border-radius: 3px 0 0 3px;
+	}
+
+	
+	/* toggle hover */
+	input.radio:hover:not(:checked) ~ label:before {
+		content:'';
+		text-indent: .9em;
+		color: #C2C2C2;
+	}
+
+	input.radio:hover:not(:checked) ~ label {
+		color: #888;
+	}
+
+	/* toggle on */
+	input.radio:checked ~ label:before {
+		content:'';
+		text-indent: .9em;
+		color: #9CE2AE;
+		background-color: #4DCB6D;
+	}
+
+	input.radio:checked ~ label {
+		color: #f00;
+		border: 1px solid #9CE2AE
+	}
+	
+	
+
+	#pbh.input{
+		width:50%;
+	}
+	.chkbh {
+		left:0.5em;
+		top:-0.3em;
+		display:inline-block;
+		width: 1em;
+		height: 0.7em;
+		background: #555;
+		margin: 0px;
+		position: relative;
+		border-radius: 9px;
+	}
+	.chkbh label {
+		display: block;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+
+		transition: all .3s ease;
+		cursor: pointer;
+		position: absolute;
+		top: -0.2em;
+		left: -0.5em;
+		background: #03b8ff;
+	}
+	.chkbh:before{
+		display:block;
+		content:' ';
+		width:50%;
+		background: green;
+		padding:0;
+	}
+	.chkbh:after{
+		display:block;
+		content:' ';
+		width:50%;
+		background: red;
+		padding:0;
+	}
+	.chkbh input[type=checkbox]:checked + label {
+		left: 0.4em;
+	}
+
+	#pro-wrap{
+		height:20%;
+	}
+	
+	.label{
+		display:inline-block;
+	}
+	body{
+		font-family:tahoma;
+	}
+	 #btnSub{
+		display:block;
+		bottom:0px;
+		
+	}
+	
+	.pro-ele{
+		display:none;
+		width:auto;
+	}
+
+	.gop-contain{
+		float:left;
+		display:block;
+		width:100%;
+		overflow-y: scroll;
+		height:90%;
+	}
